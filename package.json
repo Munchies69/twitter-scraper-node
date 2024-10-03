@@ -1,0 +1,42 @@
+{
+  "name": "twitter-scraper-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "server": "ts-node src/server.ts",
+    "client": "cd frontend && npm start",
+    "build-frontend": "ts-node build-frontend.ts",
+    "watch-frontend": "nodemon --watch frontend/src --exec \"npm run build-frontend\" -e js,jsx,ts,tsx,css,json",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run watch-frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^22.0.0",
+    "@types/puppeteer": "^7.0.4",
+    "axios": "^1.7.2",
+    "chart.js": "^4.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "node-cache": "^5.1.2",
+    "openai": "^4.53.2",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "puppeteer": "^22.14.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "sequelize": "^6.37.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "^126.0.0",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.4"
+  }
+}
